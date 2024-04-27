@@ -11,6 +11,8 @@ class App:
         input_form = st.form('Input')
 
         input_text = input_form.text_area(label='Type a poem:', key='input_text')
+
+        # TODO: add model dropdown
         
         input_submit = input_form.form_submit_button('Submit!')
         st.session_state['help'] = input_text
