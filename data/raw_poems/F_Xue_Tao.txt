@@ -132,14 +132,6 @@ Commander Wei (II))
 步搖冠翠一千峰。
 
 16
-西岩 (Westcliff)
-
-憑闌卻憶騎鯨客，
-把酒臨風手自招。
-細雨聲中停去馬，
-夕陽影里亂鳴蜩。
-
-17
 風 (Wind)
 
 獵蕙微風遠，
@@ -147,7 +139,7 @@ Commander Wei (II))
 林梢明淅瀝，
 松徑夜淒清。
 
-18
+17
 月 (Moon)
 
 魄依鉤樣小，
@@ -155,7 +147,7 @@ Commander Wei (II))
 細影將圓質，
 人間幾處看。
 
-19
+18
 浣花亭陪川主王播相公曁寮同賦早菊 (In Huanhua Pavilion Accompanying the Head of Chuan, Master Wang Bo, I Compose a Poem on Early Chrysanthemums Together With Him and His Colleagues)
 
 西陸行終令，
@@ -167,7 +159,7 @@ Commander Wei (II))
 獻酬樽俎外，
 寧有懼豺狼。
 
-20
+19
 秋泉 (Autumn Spring)
 
 泠色初澄一帶烟，
@@ -175,7 +167,7 @@ Commander Wei (II))
 長來枕上牽情思，
 不使愁人半夜眠。
 
-21
+20
 試新服裁製初成三首 (Three Poems on Trying On New Clothes Which Were Just Tailored (I))
 
 紫陽宮裏賜紅綃，
@@ -183,7 +175,7 @@ Commander Wei (II))
 霜兔毳寒冰繭淨，
 嫦娥笑指織星橋。
 
-22
+21
 試新服裁製初成三首 (Three Poems on Trying On New Clothes Which Were Just Tailored (II))
 
 九氣分爲九色霞，
@@ -191,7 +183,7 @@ Commander Wei (II))
 春風因過東君舍，
 偷樣人間染百花。
 
-23
+22
 試新服裁製初成三首 (Three Poems on Trying On New Clothes Which Were Just Tailored (III))
 
 長裾本是上清儀，
@@ -199,7 +191,7 @@ Commander Wei (II))
 每到宮中歌舞會，
 折腰齊唱步虛詞。
 
-24
+23
 採蓮舟 (Lotus Picking Boat)
 
 風前一葉壓荷蕖，
@@ -207,7 +199,7 @@ Commander Wei (II))
 兔走烏馳人語靜，
 滿溪紅袂櫂歌初。
 
-25
+24
 菱荇沼 (A Pond of Water Caltrops and Duckweeds)
 
 水荇斜牽綠藻浮，
@@ -215,7 +207,7 @@ Commander Wei (II))
 何時得向溪頭賞，
 旋摘菱花旋泛舟。
 
-26
+25
 蟬 (Cicadas)
 
 露滌音清遠，
@@ -223,7 +215,7 @@ Commander Wei (II))
 聲聲似相接，
 各在一枝棲。
 
-27
+26
 鴛鴦草 (Mandarin Duck Grass)
 
 綠英滿香砌，
@@ -231,7 +223,7 @@ Commander Wei (II))
 但娛春日長，
 不管秋風早。
 
-28
+27
 池上雙鳧 (A Pair of Mallards Upon the Stream)
 
 雙棲綠池上，
@@ -239,7 +231,7 @@ Commander Wei (II))
 更憶將雛日，
 同心蓮葉間。
 
-29
+28
 上川主武元衡相國二首 (For Minister of State Wu Yuanheng, the Governor of Sichuan, Two Poems (I))
 
 落日重城夕霧收，
@@ -247,7 +239,7 @@ Commander Wei (II))
 因令朗月當庭燎，
 不使珠簾下玉鉤。
 
-30
+29
 上川主武元衡相國二首 (For Minister of State Wu Yuanheng, the Governor of Sichuan, Two Poems (II))
 
 東閣移尊綺席陳，
@@ -255,7 +247,7 @@ Commander Wei (II))
 軍城畫角三聲歇，
 雲幕初垂紅燭新。
 
-31
+30
 十離 (Ten Partings)
 
 犬離主
@@ -274,7 +266,7 @@ Commander Wei (II))
 為驚玉貌郎君墜，
 不得華軒更一嘶。
 
-32
+31
 摩訶池贈蕭中丞 (Mohe Pool: Presented to Vice Censor-in-chief)
 
 昔以多能佐碧油，
@@ -282,7 +274,7 @@ Commander Wei (II))
 淒涼逝水頹波遠，
 惟有碑泉咽不流。
 
-33
+32
 菱荇沼 (Water Caltrop and Floating Heart Pond)
 
 水荇斜牽綠藻浮，
@@ -290,7 +282,7 @@ Commander Wei (II))
 何時得向溪頭賞，
 旋摘菱花旋泛舟。
 
-34
+33
 柳絮 (Willow Catkins)
 
 霭霭芳春朝，

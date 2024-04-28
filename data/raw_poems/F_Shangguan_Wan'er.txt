@@ -1,18 +1,6 @@
 Shangguan Wan'er, F
 
 1
-九月九日上幸慈恩寺登浮圖，群臣上菊花壽酒 (On the Double Ninth Day, His Majesty Visited the Ci’en Monastery and Climbed the Pagoda; the Officials who Gathered Toasted His Longevity with Chrysanthemum Wine)
-
-帝裏重陽節，
-香園萬乘來。
-卻邪萸入佩，
-獻壽菊傳杯。
-塔類承天湧，
-門疑待佛開。
-睿詞懸日月，
-長得仰昭回。
-
-2
 上官婉兒 遊長寧公主流杯 (Visiting Princess Changning’s Pool (XVII))
 
 嚴壑恣登臨，
@@ -20,7 +8,7 @@ Shangguan Wan'er, F
 風篁類長笛，
 流水當鳴琴。
 
-3
+2
 上官婉兒 遊長寧公主流杯 (Visiting Princess Changning’s Pool (V))
 
 枝條鬱鬱，
@@ -28,7 +16,7 @@ Shangguan Wan'er, F
 山林作伴，
 松桂為鄰。
 
-4
+3
 Unknown
 
 密葉因裁吐，
@@ -40,7 +28,7 @@ Unknown
 借問桃將李，
 相亂欲何如？
 
-5
+4
 Unknown
 
 釋子談經處，
@@ -56,7 +44,7 @@ Unknown
 太平詞藻盛，
 長願紀鴻休。
 
-6
+5
 Unknown
 
 三冬季月景龍年，
@@ -64,7 +52,7 @@ Unknown
 遙看電躍龍為馬，
 回矚霜原玉作田。
 
-7
+6
 Unknown
 
 鸞旂掣曳拂空回，
@@ -72,7 +60,7 @@ Unknown
 隱隱驪山雲外聳，
 迢迢御帳日邊開。
 
-8
+7
 Unknown
 
 玉環騰遠構，
@@ -84,7 +72,7 @@ Unknown
 公輸與班爾，
 從此遂韜聲。
 
-9
+8
 Unknown
 
 霽曉氣清和，
@@ -96,7 +84,7 @@ Unknown
 除非物外者，
 誰就此經過。
 
-10
+9
 Unknown
 
 暫爾遊山第，
@@ -108,7 +96,7 @@ Unknown
 此真攀桂所，
 臨睨賞光輝。
 
-11
+10
 Unknown
 
 放曠出煙雲，
@@ -120,7 +108,7 @@ Unknown
 山室何為貴，
 唯餘蘭桂熏。
 
-12
+11
 Unknown
 
 策杖臨霞岫，
@@ -132,7 +120,7 @@ Unknown
 莫怪人題樹，
 只為賞幽棲。
 
-13
+12
 Unknown
 
 葉下洞庭初，

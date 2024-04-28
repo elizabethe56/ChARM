@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 streamlit = "*"
+selenium = "*"
+bs4 = "*"
+matplotlib = "*"
+ipykernel = "*"
 
 [dev-packages]
 

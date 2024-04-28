@@ -137,23 +137,15 @@ num,author,title,eng_title,poem,gender
 童顏學可成。
 無過天竺國，
 依止古先生。",F
-1,Shangguan Wan'er,九月九日上幸慈恩寺登浮圖，群臣上菊花壽酒,"On the Double Ninth Day, His Majesty Visited the Ci’en Monastery and Climbed the Pagoda; the Officials who Gathered Toasted His Longevity with Chrysanthemum Wine","帝裏重陽節，
-香園萬乘來。
-卻邪萸入佩，
-獻壽菊傳杯。
-塔類承天湧，
-門疑待佛開。
-睿詞懸日月，
-長得仰昭回。",F
-2,Shangguan Wan'er,上官婉兒,長寧公主流杯 (Visiting Princess Changning’s Pool (XVII),"嚴壑恣登臨，
+1,Shangguan Wan'er,上官婉兒,長寧公主流杯 (Visiting Princess Changning’s Pool (XVII),"嚴壑恣登臨，
 瑩目復怡心。
 風篁類長笛，
 流水當鳴琴。",F
-3,Shangguan Wan'er,上官婉兒,長寧公主流杯 (Visiting Princess Changning’s Pool (V),"枝條鬱鬱，
+2,Shangguan Wan'er,上官婉兒,長寧公主流杯 (Visiting Princess Changning’s Pool (V),"枝條鬱鬱，
 文質彬彬。
 山林作伴，
 松桂為鄰。",F
-4,Shangguan Wan'er,Unknown,Unknown,"密葉因裁吐，
+3,Shangguan Wan'er,Unknown,Unknown,"密葉因裁吐，
 新花逐翦舒。
 攀條雖不謬，
 摘蕊詎知虛。
@@ -161,7 +153,7 @@ num,author,title,eng_title,poem,gender
 秋還未肯疏。
 借問桃將李，
 相亂欲何如？",F
-5,Shangguan Wan'er,Unknown,Unknown,"釋子談經處，
+4,Shangguan Wan'er,Unknown,Unknown,"釋子談經處，
 軒臣刻字留。
 故臺遺老識，
 殘簡聖皇求。
@@ -173,15 +165,15 @@ num,author,title,eng_title,poem,gender
 天杯接獻酬。
 太平詞藻盛，
 長願紀鴻休。",F
-6,Shangguan Wan'er,Unknown,Unknown,"三冬季月景龍年，
+5,Shangguan Wan'er,Unknown,Unknown,"三冬季月景龍年，
 萬乘觀風出灞川。
 遙看電躍龍為馬，
 回矚霜原玉作田。",F
-7,Shangguan Wan'er,Unknown,Unknown,"鸞旂掣曳拂空回，
+6,Shangguan Wan'er,Unknown,Unknown,"鸞旂掣曳拂空回，
 羽騎驂驔躡景來。
 隱隱驪山雲外聳，
 迢迢御帳日邊開。",F
-8,Shangguan Wan'er,Unknown,Unknown,"玉環騰遠構，
+7,Shangguan Wan'er,Unknown,Unknown,"玉環騰遠構，
 金埓荷殊榮。
 弗玩珠璣飾，
 仍留仁智情。
@@ -189,7 +181,7 @@ num,author,title,eng_title,poem,gender
 憑樹即為楹。
 公輸與班爾，
 從此遂韜聲。",F
-9,Shangguan Wan'er,Unknown,Unknown,"霽曉氣清和，
+8,Shangguan Wan'er,Unknown,Unknown,"霽曉氣清和，
 披襟賞薜蘿。
 玳瑁凝春色，
 琉璃漾水波。
@@ -197,7 +189,7 @@ num,author,title,eng_title,poem,gender
 攀松乍短歌。
 除非物外者，
 誰就此經過。",F
-10,Shangguan Wan'er,Unknown,Unknown,"暫爾遊山第，
+9,Shangguan Wan'er,Unknown,Unknown,"暫爾遊山第，
 淹留惜未歸。
 霞窗明月滿，
 澗戶白雲飛。
@@ -205,7 +197,7 @@ num,author,title,eng_title,poem,gender
 人將薜作衣。
 此真攀桂所，
 臨睨賞光輝。",F
-11,Shangguan Wan'er,Unknown,Unknown,"放曠出煙雲，
+10,Shangguan Wan'er,Unknown,Unknown,"放曠出煙雲，
 蕭條自不群。
 漱流清意府，
 隱几避囂氛。
@@ -213,7 +205,7 @@ num,author,title,eng_title,poem,gender
 風梭織水文。
 山室何為貴，
 唯餘蘭桂熏。",F
-12,Shangguan Wan'er,Unknown,Unknown,"策杖臨霞岫，
+11,Shangguan Wan'er,Unknown,Unknown,"策杖臨霞岫，
 危步下霜蹊。
 志逐深山靜，
 途隨曲澗迷。
@@ -221,7 +213,7 @@ num,author,title,eng_title,poem,gender
 俄看雲霧低。
 莫怪人題樹，
 只為賞幽棲。",F
-13,Shangguan Wan'er,Unknown,Unknown,"葉下洞庭初，
+12,Shangguan Wan'er,Unknown,Unknown,"葉下洞庭初，
 思君萬里餘。
 露濃香被冷，
 月落錦屏虛。
@@ -475,19 +467,15 @@ Commander Wei (II)","黠虜猶違命，
 意思都盧粉墨容。
 今日忽登虛境望，
 步搖冠翠一千峰。",F
-16,Xue Tao,西岩,Westcliff,"憑闌卻憶騎鯨客，
-把酒臨風手自招。
-細雨聲中停去馬，
-夕陽影里亂鳴蜩。",F
-17,Xue Tao,風,Wind,"獵蕙微風遠，
+16,Xue Tao,風,Wind,"獵蕙微風遠，
 飄弦唳一聲。
 林梢明淅瀝，
 松徑夜淒清。",F
-18,Xue Tao,月,Moon,"魄依鉤樣小，
+17,Xue Tao,月,Moon,"魄依鉤樣小，
 扇逐漢機團。
 細影將圓質，
 人間幾處看。",F
-19,Xue Tao,浣花亭陪川主王播相公曁寮同賦早菊,"In Huanhua Pavilion Accompanying the Head of Chuan, Master Wang Bo, I Compose a Poem on Early Chrysanthemums Together With Him and His Colleagues","西陸行終令，
+18,Xue Tao,浣花亭陪川主王播相公曁寮同賦早菊,"In Huanhua Pavilion Accompanying the Head of Chuan, Master Wang Bo, I Compose a Poem on Early Chrysanthemums Together With Him and His Colleagues","西陸行終令，
 東籬始再陽。
 綠英初濯露，
 金蘂半含霜。
@@ -495,51 +483,51 @@ Commander Wei (II)","黠虜猶違命，
 那同衆草芳。
 獻酬樽俎外，
 寧有懼豺狼。",F
-20,Xue Tao,秋泉,Autumn Spring,"泠色初澄一帶烟，
+19,Xue Tao,秋泉,Autumn Spring,"泠色初澄一帶烟，
 幽聲遙瀉十絲弦。
 長來枕上牽情思，
 不使愁人半夜眠。",F
-21,Xue Tao,試新服裁製初成三首,Three Poems on Trying On New Clothes Which Were Just Tailored (I),"紫陽宮裏賜紅綃，
+20,Xue Tao,試新服裁製初成三首,Three Poems on Trying On New Clothes Which Were Just Tailored (I),"紫陽宮裏賜紅綃，
 仙霧朦朧隔海遙。
 霜兔毳寒冰繭淨，
 嫦娥笑指織星橋。",F
-22,Xue Tao,試新服裁製初成三首,Three Poems on Trying On New Clothes Which Were Just Tailored (II),"九氣分爲九色霞，
+21,Xue Tao,試新服裁製初成三首,Three Poems on Trying On New Clothes Which Were Just Tailored (II),"九氣分爲九色霞，
 五靈仙馭五雲車。
 春風因過東君舍，
 偷樣人間染百花。",F
-23,Xue Tao,試新服裁製初成三首,Three Poems on Trying On New Clothes Which Were Just Tailored (III),"長裾本是上清儀，
+22,Xue Tao,試新服裁製初成三首,Three Poems on Trying On New Clothes Which Were Just Tailored (III),"長裾本是上清儀，
 曾逐羣仙把玉芝。
 每到宮中歌舞會，
 折腰齊唱步虛詞。",F
-24,Xue Tao,採蓮舟,Lotus Picking Boat,"風前一葉壓荷蕖，
+23,Xue Tao,採蓮舟,Lotus Picking Boat,"風前一葉壓荷蕖，
 解報新秋又得魚。
 兔走烏馳人語靜，
 滿溪紅袂櫂歌初。",F
-25,Xue Tao,菱荇沼,A Pond of Water Caltrops and Duckweeds,"水荇斜牽綠藻浮，
+24,Xue Tao,菱荇沼,A Pond of Water Caltrops and Duckweeds,"水荇斜牽綠藻浮，
 柳絲和葉臥清流。
 何時得向溪頭賞，
 旋摘菱花旋泛舟。",F
-26,Xue Tao,蟬,Cicadas,"露滌音清遠，
+25,Xue Tao,蟬,Cicadas,"露滌音清遠，
 風吹故葉齊。
 聲聲似相接，
 各在一枝棲。",F
-27,Xue Tao,鴛鴦草,Mandarin Duck Grass,"綠英滿香砌，
+26,Xue Tao,鴛鴦草,Mandarin Duck Grass,"綠英滿香砌，
 兩兩鴛鴦小。
 但娛春日長，
 不管秋風早。",F
-28,Xue Tao,池上雙鳧,A Pair of Mallards Upon the Stream,"雙棲綠池上，
+27,Xue Tao,池上雙鳧,A Pair of Mallards Upon the Stream,"雙棲綠池上，
 朝去暮飛還。
 更憶將雛日，
 同心蓮葉間。",F
-29,Xue Tao,上川主武元衡相國二首,"For Minister of State Wu Yuanheng, the Governor of Sichuan, Two Poems (I)","落日重城夕霧收，
+28,Xue Tao,上川主武元衡相國二首,"For Minister of State Wu Yuanheng, the Governor of Sichuan, Two Poems (I)","落日重城夕霧收，
 玳筵雕俎薦諸侯。
 因令朗月當庭燎，
 不使珠簾下玉鉤。",F
-30,Xue Tao,上川主武元衡相國二首,"For Minister of State Wu Yuanheng, the Governor of Sichuan, Two Poems (II)","東閣移尊綺席陳，
+29,Xue Tao,上川主武元衡相國二首,"For Minister of State Wu Yuanheng, the Governor of Sichuan, Two Poems (II)","東閣移尊綺席陳，
 貂簪龍節更宜春。
 軍城畫角三聲歇，
 雲幕初垂紅燭新。",F
-31,Xue Tao,十離,Ten Partings,"犬離主
+30,Xue Tao,十離,Ten Partings,"犬離主
 馴擾朱門四五年，
 毛香足淨主人憐。
 無端咬著親情客，
@@ -554,15 +542,15 @@ Commander Wei (II)","黠虜猶違命，
 追風曾到日東西。
 為驚玉貌郎君墜，
 不得華軒更一嘶。",F
-32,Xue Tao,摩訶池贈蕭中丞,Mohe Pool: Presented to Vice Censor-in-chief,"昔以多能佐碧油，
+31,Xue Tao,摩訶池贈蕭中丞,Mohe Pool: Presented to Vice Censor-in-chief,"昔以多能佐碧油，
 今朝同泛舊仙舟。
 淒涼逝水頹波遠，
 惟有碑泉咽不流。",F
-33,Xue Tao,菱荇沼,Water Caltrop and Floating Heart Pond,"水荇斜牽綠藻浮，
+32,Xue Tao,菱荇沼,Water Caltrop and Floating Heart Pond,"水荇斜牽綠藻浮，
 柳絲和葉臥清流。
 何時得向溪頭賞，
 旋摘菱花旋泛舟。",F
-34,Xue Tao,柳絮,Willow Catkins,"霭霭芳春朝，
+33,Xue Tao,柳絮,Willow Catkins,"霭霭芳春朝，
 雪絮起青条。
 或值花同舞，
 不因风自飘。
