@@ -141,6 +141,9 @@ def get_F_poems() -> pd.DataFrame:
     reformat_poem(F_df)
     return F_df
 
+def get_poems() -> tuple[pd.DataFrame, pd.DataFrame]:
+    return get_M_poems(), get_F_poems()
+
 def get_M_poems_short(M_df: pd.DataFrame = None) -> pd.DataFrame:
     # Filter the poems so they are at most 150 characters long
     if M_df is None:
@@ -155,12 +158,15 @@ def get_F_poems_short(F_df: pd.DataFrame = None) -> pd.DataFrame:
     
     return F_df[F_df['length'] <= 150].reset_index(drop=True)
 
+def get_poems_short(M_df: pd.DataFrame = None, 
+                    F_df: pd.DataFrame = None
+                    ) -> tuple[pd.DataFrame, pd.DataFrame]:
+    return get_M_poems_short(M_df), get_F_poems_short(F_df)
+
 def remove_pinyin(text: str, 
                   chr_per_line: int
                   ) -> str:
     ch_text = re.sub('[a-zāēīōūǖáéíóúǘǎěǐǒǔǚàèìòùǜü \n]','',text)
-    # b = re.sub('\n','',b)
-
     ch_text = ('\n').join(re.findall(".{1,%d}" % (chr_per_line),ch_text))
 
     return ch_text
@@ -228,25 +234,22 @@ def see_dist_graphs():
 
     return
 
-def get_ttv_idxs(n: int, 
+def get_tv_idxs(n: int, 
                  train_pct: float, 
-                 val_pct: float, 
                  random_seed: int = None
                  ) -> tuple[list, list, list]:
     if random_seed is not None:
         np.random.seed(random_seed)
 
     train_size = int(n * train_pct)
-    val_size = int(n * val_pct)
 
     idxs = list(range(n))
     np.random.shuffle(idxs)
 
     train_idxs = idxs[ : train_size]
-    val_idxs = idxs[train_size : train_size + val_size]
-    test_idxs = idxs[train_size + val_size : ]
+    val_idxs = idxs[train_size : ]
 
-    return train_idxs, val_idxs, test_idxs
+    return train_idxs, val_idxs
 
 def get_splits(df, 
                split_idxs
@@ -257,27 +260,27 @@ def get_splits(df,
 
     return splits
 
-def train_test_val_split(M_df: pd.DataFrame,
-                         F_df: pd.DataFrame, 
-                         x_col: str, 
-                         y_col: str, 
-                         train_pct: float = 0.75, 
-                         val_pct: float = 0.15,
-                         random_seed: int = None):
+def train_val_split(M_df: pd.DataFrame,
+                    F_df: pd.DataFrame,
+                    x_col: str,
+                    y_col: str,
+                    train_pct: float = 0.75,
+                    random_seed: int = None):
 
-    if (train_pct + val_pct) > 1:
-        raise ValueError("Sum of percentages must be less than or equal to 1.")
-    np.random.seed(1693)
+    if (train_pct > 1):
+        raise ValueError("Percentage must be less than or equal to 1.")
+    
+    if random_seed is not None:
+        np.random.seed(random_seed)
 
-    M_splits_idx = get_ttv_idxs(len(M_df), train_pct, val_pct, random_seed)
-    F_splits_idx = get_ttv_idxs(len(F_df), train_pct, val_pct, random_seed)
+    M_splits_idx = get_tv_idxs(len(M_df), train_pct, random_seed)
+    F_splits_idx = get_tv_idxs(len(F_df), train_pct, random_seed)
     
     M_splits = get_splits(M_df, M_splits_idx)
     F_splits = get_splits(F_df, F_splits_idx)
 
     train = pd.concat([M_splits[0], F_splits[0]], ignore_index=True).sample(frac=1).reset_index(drop=True)
     val = pd.concat([M_splits[1], F_splits[1]], ignore_index=True).sample(frac=1).reset_index(drop=True)
-    test = pd.concat([M_splits[2], F_splits[2]], ignore_index=True).sample(frac=1).reset_index(drop=True)
 
-    return train[x_col], val[x_col], test[x_col], train[y_col], val[y_col], test[y_col]
+    return train[x_col], val[x_col], train[y_col], val[y_col]
 

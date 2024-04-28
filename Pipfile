@@ -9,6 +9,7 @@ selenium = "*"
 bs4 = "*"
 matplotlib = "*"
 ipykernel = "*"
+scikit-learn = "*"
 
 [dev-packages]
 
