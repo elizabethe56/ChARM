@@ -28,6 +28,10 @@ class App:
         return self.conversion[yhat[0]]
     
     def window(self):
+
+        st.title('ChARM')
+        st.subheader('Chinese Authorship Recognition Model')
+        
         col1, col2 = st.columns(2)
         input_form = col1.form('Input')
 
