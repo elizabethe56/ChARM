@@ -13,10 +13,6 @@ from src.metrics import accuracy_score
 
 MODEL_PATH = 'models'
 
-# TODO: add TFIDF_SVC class
-# TODO: - train, predict, score
-# TODO: - save svc model?
-
 class TFIDF:
 
     DATA_PATH = os.path.join(MODEL_PATH, 'tfdif.pkl')

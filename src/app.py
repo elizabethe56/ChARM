@@ -33,9 +33,23 @@ class App:
         st.subheader('Chinese Authorship Recognition Model')
 
         col1, col2 = st.columns(2)
+
+        demo1 = col1.toggle('Use Demo Data 1')
+        if demo1:
+            value = """帝裏重陽節，
+                        香園萬乘來。
+                        卻邪萸入佩，
+                        獻壽菊傳杯。
+                        塔類承天湧，
+                        門疑待佛開。
+                        睿詞懸日月，
+                        長得仰昭回。"""
+        else:
+            value = ''
+
         input_form = col1.form('Input')
 
-        input_text = input_form.text_area(label='Type a poem:', key='input_text')
+        input_text = input_form.text_area(label='Type a poem:', value=value, key='input_text')
 
         model_selection = ['TF-IDF and Support Vector Machine']
         input_model = input_form.selectbox('Choose a model:', 
