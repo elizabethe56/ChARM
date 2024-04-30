@@ -25,7 +25,7 @@ class App:
         else:
             yhat = ['M']
 
-        return yhat
+        return self.conversion[yhat[0]]
     
     def window(self):
         col1, col2 = st.columns(2)
@@ -45,11 +45,7 @@ class App:
         else:
             result = ''
 
-        # rand = np.random.random()
-        # if rand > 0.5:
-        #     result = 'Woman'
-        # else:
-        #     result = 'Man'
+        col2.text("This poem was likely written by a")
         col2.text(result)
-        col2.text(st.session_state)
+        # col2.text(st.session_state)
         return
