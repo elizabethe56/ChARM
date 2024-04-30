@@ -31,7 +31,7 @@ class App:
 
         st.title('ChARM')
         st.subheader('Chinese Authorship Recognition Model')
-        
+
         col1, col2 = st.columns(2)
         input_form = col1.form('Input')
 
@@ -49,7 +49,7 @@ class App:
         else:
             result = ''
 
-        col2.text("This poem was likely written by a")
-        col2.text(result)
+        col2.text(f"This poem was likely written by a\n{result}")
+        # col2.text(result)
         # col2.text(st.session_state)
         return
