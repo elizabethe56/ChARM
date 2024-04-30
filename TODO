@@ -1,6 +1,0 @@
-GET APP FUNCTIONING WITH TFIDF
-- move files
-- Adjust training/testing/demo data
-- save train tfidf csr
-- write function for testing
-- add to website
