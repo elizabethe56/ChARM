@@ -133,12 +133,12 @@ def save_F_poems() -> pd.DataFrame:
 
 def get_M_poems() -> pd.DataFrame:
     M_df = pd.read_csv(M_poems_path)
-    reformat_poem(M_df)
+    reformat_poem_df(M_df)
     return M_df
 
 def get_F_poems() -> pd.DataFrame:
     F_df = pd.read_csv(F_poems_path)
-    reformat_poem(F_df)
+    reformat_poem_df(F_df)
     return F_df
 
 def get_poems() -> tuple[pd.DataFrame, pd.DataFrame]:
@@ -171,30 +171,34 @@ def remove_pinyin(text: str,
 
     return ch_text
 
-def reformat_poem(df: pd.DataFrame):
+def reformat_poem_df(df: pd.DataFrame):
     no_punct = np.zeros(len(df), dtype=object)
     lengths = np.zeros(len(df), dtype=int)
 
     for i, poem in enumerate(df['poem']):
-        # Remove punctuation
-        temp = re.sub(fr'{ch_punct_re}', '', poem)
-
-        # Replace new lines with an _
-        temp = re.sub('\n', '_', temp)
-
-        # Save length of punctuation-less poem
-        lengths[i] = len(temp)
-
-        # Add spaces between each character so they are processed as individual words
-        temp = temp.replace('', ' ').strip()
-
-        # Save new format
-        no_punct[i] = temp
+        text, length = reformat_poem(poem)
+        no_punct[i] = text
+        lengths[i] = length
 
     df['poem_no_punct'] = no_punct
     df['length'] = lengths
     
     return
+
+def reformat_poem(poem: str) -> tuple[str, int]:
+    # Remove punctuation
+    text = re.sub(fr'{ch_punct_re}', '', poem)
+
+    # Replace new lines with an _
+    text = re.sub('\n', '_', text)
+
+    # Save length of punctuation-less poem
+    length = len(text)
+
+    # Add spaces between each character so they are processed as individual words
+    text = text.replace('', ' ').strip()
+
+    return text, length
 
 def see_dist_graphs():
     M_df = get_M_poems()
@@ -234,10 +238,10 @@ def see_dist_graphs():
 
     return
 
-def get_tv_idxs(n: int, 
-                 train_pct: float, 
-                 random_seed: int = None
-                 ) -> tuple[list, list, list]:
+def get_tv_idxs(n: int,
+                train_pct: float,
+                random_seed: int = None
+                ) -> tuple[list, list, list]:
     if random_seed is not None:
         np.random.seed(random_seed)
 
@@ -264,7 +268,7 @@ def train_val_split(M_df: pd.DataFrame,
                     F_df: pd.DataFrame,
                     x_col: str,
                     y_col: str,
-                    train_pct: float = 0.75,
+                    train_pct: float = 0.82,
                     random_seed: int = None):
 
     if (train_pct > 1):
@@ -278,7 +282,7 @@ def train_val_split(M_df: pd.DataFrame,
     
     M_splits = get_splits(M_df, M_splits_idx)
     F_splits = get_splits(F_df, F_splits_idx)
-
+    
     train = pd.concat([M_splits[0], F_splits[0]], ignore_index=True).sample(frac=1).reset_index(drop=True)
     val = pd.concat([M_splits[1], F_splits[1]], ignore_index=True).sample(frac=1).reset_index(drop=True)
 
