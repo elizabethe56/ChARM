@@ -10,6 +10,8 @@ bs4 = "*"
 matplotlib = "*"
 ipykernel = "*"
 scikit-learn = "*"
+tensorflow = "*"
+seaborn = "*"
 
 [dev-packages]
 
