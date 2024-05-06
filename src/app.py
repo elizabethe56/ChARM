@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import os
 
 import src.preprocessing as pp
 from src.models import *
@@ -8,6 +9,8 @@ from src.metrics import accuracy_score, confusion_matrix
 class App:
 
     conversion = {'F':'Woman', 'M':'Man'}
+    demoF_path = os.path.join('data','demo_F1.txt')
+    demoM_path = os.path.join('data','demo_M1.txt')
 
     def __init__(self):
 
@@ -16,6 +19,16 @@ class App:
 
         if 'rnn' not in st.session_state:
             st.session_state.rnn = load_rnn()
+
+        if 'demoF' not in st.session_state:
+            with open(self.demoF_path, 'r') as f:
+                demoF_text = f.read()
+            st.session_state.demoF = demoF_text.split('\n\n')[1]
+
+        if 'demoM' not in st.session_state:
+            with open(self.demoM_path, 'r') as f:
+                demoM_text = f.read()
+            st.session_state.demoM = demoM_text.split('\n\n')[1]
 
         return
     
@@ -37,20 +50,16 @@ class App:
         col1, col2 = st.columns(2)
 
         input_form = col1.form('Input')
-        demo1 = input_form.toggle('Use Demo Data 1')
-        if demo1:
-            value = """帝裏重陽節，
-香園萬乘來。
-卻邪萸入佩，
-獻壽菊傳杯。
-塔類承天湧，
-門疑待佛開。
-睿詞懸日月，
-長得仰昭回。"""
+        demoF = input_form.toggle('Use Demo Data 1')
+        demoM = input_form.toggle('Use Demo Data 2')
+        if demoF:
+            input_value = st.session_state.demoF
+        elif demoM:
+            input_value = st.session_state.demoM
         else:
-            value = ''
+            input_value = ''
 
-        input_text = input_form.text_area(label='Type a poem:', value=value, key='input_text')
+        input_text = input_form.text_area(label='Type a poem:', value=input_value, key='input_text')
 
         model_selection = ['TF-IDF and Support Vector Machine', 'RNN']
         input_model = input_form.selectbox('Choose a model:', 
