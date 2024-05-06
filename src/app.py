@@ -25,7 +25,7 @@ class App:
             
             yhat = st.session_state.svc.predict([text_processed])
         else:
-            yhat = st.session_state.rnn.predict([text_processed])
+            yhat = st.session_state.rnn.predict([text_processed], get_prob=False)
 
         return self.conversion[yhat[0]]
     
