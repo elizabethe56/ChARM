@@ -57,10 +57,13 @@ class App:
 
         col1.subheader('Inputs')
 
-        demo_opt = col1.radio('Demo Data', options=['None','Demo Data 1','Demo Data 2'], horizontal=True)
-        if demo_opt == 'Demo Data 1':
+        demo_opt = col1.radio('Demo Data', 
+                              options=['None','Demo Data 1','Demo Data 2'], 
+                              horizontal=True,
+                              help = 'Demo 1 is the poem 『九月九日上幸慈恩寺登浮圖，群臣上菊花壽酒』 by Shangguan Wan\'er, a female poet.\nDemo 2 is the poem 『漁翁』 by Liu Zongyuan, a male poet.')
+        if demo_opt == 'Demo 1':
             input_value = st.session_state.demoF
-        elif demo_opt == 'Demo Data 2':
+        elif demo_opt == 'Demo 2':
             input_value = st.session_state.demoM
         else:
             input_value = st.session_state.input_text
