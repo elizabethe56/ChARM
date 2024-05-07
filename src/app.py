@@ -38,7 +38,6 @@ class App:
         return
     
     def __get_results(self, text, model):
-        print(text, model)
         text_processed, _ = pp.reformat_poem(text)
         if model == self.model_selection[0]:
             yhat = st.session_state.svc.predict([text_processed])
