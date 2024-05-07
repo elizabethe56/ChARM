@@ -286,7 +286,7 @@ class Encoder:
     
     def inverse_transform(self, 
                           yhat: np.ndarray
-                          ) -> list:
+                          ) -> np.ndarray:
         if yhat.shape[1] != len(self.categories_):
             raise IndexError(f"Input shape {yhat.shape} does not match number of categories ({len(self.categories_)})")
         # np.argmax
@@ -296,7 +296,7 @@ class Encoder:
         for i, n in enumerate(yhat):
             output[i] = inv_map[np.argmax(n)]
 
-        return list(output)
+        return np.array(output)
 
     def save_model(self):
         with open(ENCODER_PATH, 'wb+') as pf:

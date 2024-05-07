@@ -1,3 +1,4 @@
+import tensorflow as tf
 from src.app import App
 import streamlit as st
 

@@ -18,10 +18,41 @@ def accuracy_score(ytest : np.ndarray,
     nz = np.flatnonzero(ytest == yhat)
     return len(nz)/len(ytest)
 
-def confusion_matrix(ytest : np.ndarray,
-                     yhat : np.ndarray
+def confusion_matrix(ytest,
+                     yhat
                      ) -> np.ndarray:
-    return cm(ytest, yhat)
+    
+    cm = np.zeros((2,2), dtype=int)
+
+    for i, (true, pred) in enumerate(zip(ytest, yhat)):
+        # print(tfidf, rnn)
+        if true == 'F':
+            x = 0
+        else:
+            x = 1
+        
+        if pred == 'F':
+            y = 0
+        else:
+            y = 1
+
+        cm[x,y] += 1
+
+    return cm
+
+def calc_precision(ytest, yhat):
+    cm = confusion_matrix(ytest, yhat)
+    return cm[0][0] / (cm[0][0] + cm[1][0])
+
+def calc_recall(ytest, yhat):
+    cm = confusion_matrix(ytest, yhat)
+    return cm[0][0] / (cm[0][0] + cm[0][1])
+
+def calc_F_score(ytest, yhat):
+    cm = confusion_matrix(ytest, yhat)
+    p = cm[0][0] / (cm[0][0] + cm[1][0])
+    r = cm[0][0] / (cm[0][0] + cm[0][1])
+    return 2 * (p * r) / (p + r)
 
 def plot_history(history):
     acc = history.history['accuracy']
