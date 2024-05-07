@@ -5,9 +5,6 @@ import os
 # os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1' 
 
 import tensorflow as tf
-from tensorflow.data import Dataset, AUTOTUNE
-from tensorflow.keras import Model, layers, optimizers, losses, saving
-from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.models import load_model
 
 import pandas as pd
@@ -18,7 +15,6 @@ from sklearn.metrics import confusion_matrix as cm
 from sklearn.svm import SVC
 
 from src.metrics import accuracy_score, plot_history
-
 
 MODEL_PATH = 'models'
 TFIDF_PATH = os.path.join(MODEL_PATH, 'tfdif.pkl')
@@ -208,6 +204,11 @@ class TFIDF:
             pickle.dump(self, pf, pickle.HIGHEST_PROTOCOL)
         return
     
+    def get_idf(self):
+        if self.__idf is None:
+            return None
+        return self.__idf.copy()
+    
     def is_fit(self) -> bool:
         return (self.__idf is not None)
 
@@ -253,6 +254,18 @@ class TFIDF_SVC:
     
     def is_fit(self) -> bool:
         return self.__svc.fit_status_ == 0
+
+    def get_tfidf_model(self):
+        return self.__tfidf
+    
+    def get_idf(self):
+        return self.__tfidf.get_idf()
+    
+    def get_svc(self):
+        return self.__svc
+    
+    def get_svc_params(self):
+        return self.__svc.get_params()
 
 class Encoder:
     def __init__(self, 
@@ -428,9 +441,11 @@ class RNN:
             return x_rnn, x_rnn_probs
         else:
             return x_rnn
+        
+    def get_encoder(self):
+        return self.__enc
 
     def load_keras(self):
-        
         self.rnn = saving.load_model(self.__KERAS_PATH)
         return
 
