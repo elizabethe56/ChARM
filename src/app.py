@@ -68,8 +68,6 @@ class App:
         else:
             input_value = st.session_state.input_text
 
-        print('input value:', input_value)
-
         input_text = col1.text_area(label='Type a poem:',
                                     value=input_value,
                                     key='input_text',
@@ -94,7 +92,6 @@ class App:
             col2.write(f"This poem was likely written by a:")
             col2.header(result)
         
-        st.write(st.session_state)
         st.divider()
         st.subheader('Model Information')
 
