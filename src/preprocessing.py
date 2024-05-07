@@ -186,11 +186,14 @@ def reformat_poem_df(df: pd.DataFrame):
     return
 
 def reformat_poem(poem: str) -> tuple[str, int]:
+    
     # Remove punctuation
     text = re.sub(fr'{ch_punct_re}', '', poem)
-
-    # Replace new lines with an _
-    text = re.sub('\n', '_', text)
+    
+    # Remove all whitespace and replace new lines with an _
+    lines = text.split('\n')
+    lines_strip = [re.sub(r'\s', '' , l) for l in lines if l != '']
+    text = '_'.join(lines_strip)
 
     # Save length of punctuation-less poem
     length = len(text)

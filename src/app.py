@@ -1,3 +1,4 @@
+from typing import Union
 import streamlit as st
 import numpy as np
 import os
@@ -8,9 +9,10 @@ from src.metrics import accuracy_score, confusion_matrix
 
 class App:
 
-    conversion = {'F':'Woman', 'M':'Man'}
     demoF_path = os.path.join('data','demo_F1.txt')
     demoM_path = os.path.join('data','demo_M1.txt')
+    conversion = {'F':'Woman', 'M':'Man'}
+    model_selection = ['Term Frequency-Inverse Document Frequency (TF-IDF)', 'Recurrent Neural Network (RNN)']
 
     def __init__(self):
 
@@ -30,50 +32,61 @@ class App:
                 demoM_text = f.read()
             st.session_state.demoM = demoM_text.split('\n\n')[1]
 
+        if 'input_text' not in st.session_state:
+            st.session_state.input_text = ''
+
         return
     
-    def get_results(self, text, model):
+    def __get_results(self, text, model):
+        print(text, model)
         text_processed, _ = pp.reformat_poem(text)
-        if model == 'TF-IDF and Support Vector Machine':
-            
+        if model == self.model_selection[0]:
             yhat = st.session_state.svc.predict([text_processed])
-        else:
+
+        elif model == self.model_selection[1]:
             yhat = st.session_state.rnn.predict([text_processed], get_probs=False)
 
+        print('Results returned')
         return self.conversion[yhat[0]]
     
     def window(self):
 
-        st.title('ChARM')
-        st.subheader('Chinese Authorship Recognition Model')
+        st.title('ChARM - Chinese Authorship Recognition Model')
 
         col1, col2 = st.columns(2)
 
-        input_form = col1.form('Input')
-        demoF = input_form.toggle('Use Demo Data 1')
-        demoM = input_form.toggle('Use Demo Data 2')
-        if demoF:
+        col1.subheader('Inputs')
+
+        demo_opt = col1.radio('Demo Data', options=['None','Demo Data 1','Demo Data 2'], horizontal=True)
+        if demo_opt == 'Demo Data 1':
             input_value = st.session_state.demoF
-        elif demoM:
+        elif demo_opt == 'Demo Data 2':
             input_value = st.session_state.demoM
         else:
-            input_value = ''
+            input_value = st.session_state.input_text
 
-        input_text = input_form.text_area(label='Type a poem:', value=input_value, key='input_text')
+        input_text = col1.text_area(label='Type a poem:',
+                                    value=input_value,
+                                    key='input_text',
+                                    placeholder='Type a poem:',
+                                    disabled=(demo_opt != 'None'))
 
-        model_selection = ['TF-IDF and Support Vector Machine', 'RNN']
-        input_model = input_form.selectbox('Choose a model:', 
-                                              options=model_selection,
-                                              key='input_model')
         
-        input_submit = input_form.form_submit_button('Submit!')
-        
-        if input_text != '':
-            result = self.get_results(input_text, input_model)
-        else:
+        input_model = col1.selectbox('Choose a Model:',
+                                     options = self.model_selection,
+                                     key='input_model')
+
+        submit = col1.button('Run!', key='submit_button')
+
+        if submit and input_text != '':
+            result = self.__get_results(input_text, input_model)
+        else: 
             result = ''
+        
+        col2.subheader('Output')
 
-        col2.text(f"This poem was likely written by a\n{result}")
-        # col2.text(result)
-        # col2.text(st.session_state)
+        if submit and result != '':
+            col2.write(f"This poem was likely written by a:")
+            col2.header(result)
+
         return

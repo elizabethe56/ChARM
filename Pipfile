@@ -12,6 +12,7 @@ ipykernel = "*"
 scikit-learn = "*"
 tensorflow = "*"
 seaborn = "*"
+watchdog = "*"
 
 [dev-packages]
 
