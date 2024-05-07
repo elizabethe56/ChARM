@@ -58,7 +58,7 @@ class App:
         col1.subheader('Inputs')
 
         demo_opt = col1.radio('Demo Data', 
-                              options=['None','Demo Data 1','Demo Data 2'], 
+                              options=['None','Demo 1','Demo 2'], 
                               horizontal=True,
                               help = 'Demo 1 is the poem 『九月九日上幸慈恩寺登浮圖，群臣上菊花壽酒』 by Shangguan Wan\'er, a female poet.\nDemo 2 is the poem 『漁翁』 by Liu Zongyuan, a male poet.')
         if demo_opt == 'Demo 1':
@@ -67,6 +67,8 @@ class App:
             input_value = st.session_state.demoM
         else:
             input_value = st.session_state.input_text
+
+        print('input value:', input_value)
 
         input_text = col1.text_area(label='Type a poem:',
                                     value=input_value,
@@ -92,6 +94,7 @@ class App:
             col2.write(f"This poem was likely written by a:")
             col2.header(result)
         
+        st.write(st.session_state)
         st.divider()
         st.subheader('Model Information')
 
