@@ -52,6 +52,7 @@ class App:
 
         st.title('ChARM - Chinese Authorship Recognition Model')
         st.write('This app is designed to predict if a piece of traditional Tang poetry was written by a man or a woman. There are two possible models, one a term frequency-inverse document frequency model (TF-IDF), and the other a recurrent neural network (RNN). More information on the models and training data can be found below.')
+        st.write('Note: This predictor only works with traditional Chinese characters.')
 
         col1, col2 = st.columns(2)
 
